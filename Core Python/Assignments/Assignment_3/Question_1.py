@@ -5,8 +5,8 @@ num=int(input("Enter number :: "))
 
 #Perform if else operation to find type of number
 if(num==0):
-    print(f"{num} is Nutral number.")
+    print(f"{num} is Neutral number.")
 elif(num>0):
-    print(f"{num} is Possitive number.")
+    print(f"{num} is Positive number.")
 else:
     print(f"{num} is Negative number.")

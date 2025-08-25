@@ -1,16 +1,14 @@
 ### Write a program to input all sides of a triangle and check whether triangle is valid or not.
 
 # take 3 Side from user as input
-base=int(input("Enter Value of Base :: "))
-altitude=int(input("Enter Value of Altitude :: "))
-hypotenuse=int(input("Enter Value of Hypotenuse :: "))
+s1 = int(input("Enter first side: "))
+s2 = int(input("Enter second side: "))
+s3= int(input("Enter third side: "))
 
-# perform check
-if(hypotenuse== (base**2 + altitude**2)**0.5):
-    print(f"For entered Values sides {base, altitude, hypotenuse}, Triangle is valid.")
+if s1 > 0 and s2 > 0 and s3 > 0 and (s1 + s2 > s3) and (s1 + s3 > s2) and (s2 + s3 > s1):
+    print(f"For entered side values {s1}, {s2}, {s3} → Triangle is valid.")
 else:
-    print("Triangle is Invalid")
-
+    print("Triangle is not valid.")
 # name="name"
 # bol= isinstance(name, str)
 # print(f"{bol}")
