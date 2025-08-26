@@ -4,6 +4,7 @@
 num=int(input("Enter the number ::"))
 
 # sepereate each digit 
+#line of code can be shortend with the use of loop. 
 last=num%10
 num=num//10
 

@@ -12,4 +12,3 @@ if(count==1):
         print(f"{alphabet} is consonant.")
 else:
     print("Wrong input")
-

@@ -8,7 +8,6 @@ sub4=int(input("Enter marks for subject fourth :: "))
 sub5=int(input("Enter marks for subject fifth :: "))
 
 #perform calculation on subject marks 
-
 if(sub1<100 and sub2<100 and sub3<100 and sub4<100 and sub5<100 and sub1>0 and sub2>0 and sub3>0 and sub4>0 and sub5>0):
     percentage= (sub1+sub2+sub3+sub4+sub5)/500 *100
 

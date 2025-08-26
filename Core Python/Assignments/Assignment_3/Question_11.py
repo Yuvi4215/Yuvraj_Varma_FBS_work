@@ -16,6 +16,7 @@ amount=0
 
 #Perform analysis
 # for 1st person
+#line of code can be shortend with the use of loop.  
 if(a1>59):
     amount=(cost*0.5) + amount
 elif(a1<12):
