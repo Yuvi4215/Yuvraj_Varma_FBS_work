@@ -7,28 +7,28 @@
 # An additional surcharge of 20% is added to the bill
 
 # Take electricity unit from user
-unit=int(input("Enter the Electricity units ::"))
-bill=0
+unit = int(input("Enter the Electricity units ::"))
+bill = 0
 
-#perform the operation
-#line of code can be shortend with the use of loop. 
-if(unit>250):
-    over_unit= unit-250
-    bill+=over_unit*1.5
-    unit=unit-over_unit
-if(unit>=150):
-    over_unit= unit-150
-    bill+=over_unit*1.2 
-    unit=unit-over_unit
-if(unit>=50):
-    over_unit= unit-50
-    bill+=over_unit*0.75 
-    unit=unit-over_unit
-if(unit>=0):
-    over_unit= unit-0
-    bill+=over_unit*0.5
-    unit=unit-over_unit
-bill= 1.2*bill
+# perform the operation
+# line of code can be shortend with the use of loop.
+if unit > 250:
+    over_unit = unit - 250
+    bill += over_unit * 1.5
+    unit = unit - over_unit
+if unit >= 150:
+    over_unit = unit - 150
+    bill += over_unit * 1.2
+    unit = unit - over_unit
+if unit >= 50:
+    over_unit = unit - 50
+    bill += over_unit * 0.75
+    unit = unit - over_unit
+if unit >= 0:
+    over_unit = unit - 0
+    bill += over_unit * 0.5
+    unit = unit - over_unit
+bill = 1.2 * bill
 
-#display result
+# display result
 print(f"The bill amount for given unit is :: {bill}")
