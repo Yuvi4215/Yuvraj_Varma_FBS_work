@@ -17,5 +17,6 @@ print(f"""note count
        {notes[1]} :: {count[1]}  
        {notes[2]} :: {count[2]} 
        {notes[3]} :: {count[3]} 
-       {notes[4]} :: {count[4]} 
+       {notes[4]} :: {count[4]}
+       {notes[5]} :: {count[5]} 
        coins :: {amount}""")

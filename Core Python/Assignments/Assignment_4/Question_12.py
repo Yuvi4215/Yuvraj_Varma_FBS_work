@@ -1,16 +1,20 @@
 ### WAP to print Armstrong number within a given range
-num = int(input("Enter the number ::"))
-sum = 0
-temp = num
-count = len(str(num))
 
-while temp > 0:
-    digit = temp % 10
-    temp = temp // 10
-    sum += digit**count
+start = int(input("Enter the start number of range ::"))
+end = int(input("Enter the end number of range ::"))
 
-if num == sum:
-    print("It is an Armstrong number.")
-else:
-    print("It is Not an Armstrong number.")
-print(f"Sum :: {sum}")
+flag = True
+
+for num in range(start, end + 1):
+    count = len(str(num))
+    temp = num
+    sum = 0
+    while temp > 0:
+        digit = temp % 10
+        temp = temp // 10
+        sum += digit**count
+    if num == sum:
+        flag = False
+        print(f"Armstrong number found- {num}.")
+if flag:
+    print("There is no Armstrong number.")
