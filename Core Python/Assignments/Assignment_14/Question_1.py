@@ -9,9 +9,9 @@ def differenceSet(set_a, set_b):
     return result
 
 
-def differenceSet(set_a, set_b):
-    result = set_a - set_b
-    return result
+# def differenceSet(set_a, set_b):
+#     result = set_a - set_b
+#     return result
 
 
 a = {10, 20, 30, 40, 50, 60}
