@@ -1,4 +1,4 @@
-###
+### Sub class/Derived class
 from emp import Emp
 
 class Admin(Emp):
@@ -14,6 +14,6 @@ class Admin(Emp):
         # print(f"DA: {da_amt}, HRA : {hra_amt}, Allownce : {self.allownce}")
         return (da_amt+hra_amt+self.basic_sal+ self.allownce)
     
-a1=Admin("101","Yuvi",69000,2200)
-print(a1)
+# a1=Admin("101","Yuvi",69000,2200)
+# print(a1)
 
