@@ -31,7 +31,7 @@ class CustomerManager:
 
         customer = CustomerManager.customers.get(cstm_id)
         if customer and customer.pin == pin:
-            print(f"Welcome {customer.name}, login successful!")
+            print(f"----Welcome {customer.name}, login successful!----")
             CustomerManager.customerMenu(customer)
         else:
             print("====!!! Invalid ID or PIN !!!====")
@@ -41,7 +41,7 @@ class CustomerManager:
         flag = True
         while flag:
             print(
-                f"""\n==== Welcome {customer.name} ====
+                f"""\n==== Welcome {customer.name} to Consol Bank ====
     1. Check Balance
     2. Deposit Money
     3. Withdraw Money
