@@ -1,23 +1,30 @@
 ### Employee management Methods
 from customerManager import CustomerManager
+
+
 class EmployeeManager:
-    employees = {"cashier":"1234", "manager":"1111",}  # {emp_id: Employee object}
+    employees = {
+        "cashier": "1234",
+        "manager": "1111",
+    }
 
     def login():
-        emp_id=input("Enter user ID : ")
-        password=input("Enter Password : ")
+        emp_id = input("Enter user ID : ")
+        password = input("Enter Password : ")
         if emp_id in EmployeeManager.employees:
-            if password== EmployeeManager.employees[emp_id]:
+            if password == EmployeeManager.employees[emp_id]:
                 print("==== Employee Logged in Succesfully. ====")
-                attempt=0
-                flag=True
+                attempt = 0
+                flag = True
                 while flag:
-                    print(f"""\n==== Welcome mr/ms {emp_id} to Console Bank ====
+                    print(
+                        f"""\n==== Welcome mr/ms {emp_id} to Console Bank ====
         1. View all Transactions
         2. View Total Transaction Amount
         3. View All Customers
-        4. Exit""")
-                    choice = input("Choice : ") 
+        4. Exit"""
+                    )
+                    choice = input("Choice : ")
                     if choice == "1":
                         EmployeeManager.viewAllTransactions()
                     elif choice == "2":
@@ -26,15 +33,15 @@ class EmployeeManager:
                         EmployeeManager.viewAllCustomers()
                     elif choice == "4":
                         print("====!!! Exiting... Goodbye !!!====")
-                        flag=False
+                        flag = False
                     else:
-                        attempt+=1
-                        if attempt>2:
+                        attempt += 1
+                        if attempt > 2:
                             print("====!!! You have reached Attempt limit !!!====")
                             print("====!!! BACK TO LOGIN MENU !!!====")
-                            flag=False
+                            flag = False
                         else:
-                            print(f"!!! Attempt {attempt}, out of 3") 
+                            print(f"!!! Attempt {attempt}, out of 3")
                             print("==== Invalid choice, try again ====")
             else:
                 print("==== Invalid User/Password Try again ====")
@@ -50,7 +57,7 @@ class EmployeeManager:
                 for txn in customer.account.transactions:
                     print(f"   - {txn}")
             else:
-                print("   No transactions found.")
+                print("====!!! No transactions found. !!!====")
 
     @staticmethod
     def viewTotalTransactionAmount():
@@ -68,4 +75,4 @@ class EmployeeManager:
     def viewAllCustomers():
         print("\n=== All Customers ===")
         for cust_id, customer in CustomerManager.customers.items():
-            print(customer)  # uses Customer.__str__()
+            print(customer)

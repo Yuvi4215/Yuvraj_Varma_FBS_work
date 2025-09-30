@@ -1,86 +1,88 @@
 ###
-from employeeManager import EmployeeManager 
+from employeeManager import EmployeeManager
 from customerManager import CustomerManager
 
+
 def run():
-    attempt=0
-    flag=True
+    attempt = 0
+    flag = True
     while flag:
-        print("""\n==== Welcome to Console Bank ====
+        print(
+            """\n==== Welcome to Console Bank ====
         1. Customer
         2. Employee
-        3. Exit""")
-        choice = input("Choice : ") 
+        3. Exit"""
+        )
+        choice = input("Choice : ")
         if choice == "1":
             customerMenu()
         elif choice == "2":
             employeeMenu()
         elif choice == "3":
             print("====!!! Exiting... Goodbye !!!====")
-            flag=False
+            flag = False
         else:
-            attempt+=1
-            if attempt>2:
+            attempt += 1
+            if attempt > 2:
                 print("====!!! You have reached Attempt limit !!!====")
-                flag=False
+                flag = False
             else:
-                print(f"!!! Attempt {attempt}, out of 3") 
+                print(f"!!! Attempt {attempt}, out of 3")
                 print("==== Invalid choice, try again ====")
-            
-        
+
+
 def customerMenu():
-    flag=True
-    attempt=0 
+    flag = True
+    attempt = 0
     while flag:
-        print("""\n---- Customer Menu ----
+        print(
+            """\n---- Customer Menu ----
         1. Register
         2. Login
-        3. Back""")
+        3. Back"""
+        )
         choice = input("Choice : ")
-        if choice == "1": 
-            CustomerManager.createNewAccount() 
+        if choice == "1":
+            CustomerManager.createNewAccount()
         elif choice == "2":
             CustomerManager.login()
         elif choice == "3":
-            print("====!!! Previous Menu !!!====") 
-            flag=False
-        else: 
-            attempt+=1
-            if attempt>2:
+            print("====!!! Previous Menu !!!====")
+            flag = False
+        else:
+            attempt += 1
+            if attempt > 2:
                 print("====!!! You have reached Attempt limit !!!====")
-                flag=False
+                flag = False
             else:
-                print(f"!!! Attempt {attempt}, out of 3") 
+                print(f"!!! Attempt {attempt}, out of 3")
                 print("==== Invalid choice, try again ====")
 
+
 def employeeMenu():
-    flag=True
-    attempt=0 
+    flag = True
+    attempt = 0
     while flag:
-        print("""\n---- Employee Menu ----
+        print(
+            """\n---- Employee Menu ----
         1. Login
-        2. Back""")
+        2. Back"""
+        )
         choice = input("Choice : ")
         if choice == "1":
             EmployeeManager.login()
         elif choice == "2":
             print("====!!! Previous Menu !!!====")
-            flag=False
+            flag = False
         else:
-            attempt+=1
-            if attempt>2:
+            attempt += 1
+            if attempt > 2:
                 print("====!!! You have reached Attempt limit !!!====")
                 print("====!!! BACK TO MAIN MENU !!!====")
-                flag=False
+                flag = False
             else:
-                print(f"!!! Attempt {attempt}, out of 3") 
+                print(f"!!! Attempt {attempt}, out of 3")
                 print("==== Invalid choice, try again ====")
-
-
-
-
-
-
 
 
 run()
@@ -92,7 +94,7 @@ run()
 #         Choose from follwing option :
 #             1. Customer page
 #             2. Employee page
-#             3. Exit    
+#             3. Exit
 #         """)
 #     choice=input("Choice : ")
 #     if choice=="1":
@@ -108,5 +110,3 @@ run()
 #             flag=False
 #         else:
 #             print(f"Attempt {attempt}, out of 3")
-
-

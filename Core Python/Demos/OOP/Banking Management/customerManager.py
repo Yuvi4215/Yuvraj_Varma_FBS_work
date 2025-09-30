@@ -1,6 +1,8 @@
 ### Customer management Methods
 from customer import Customer
 from account import Account
+
+
 class CustomerManager:
     customers = {
         "101": Customer("101", "Yuvraj", "1122", Account("10110", "101", 0)),
@@ -20,7 +22,7 @@ class CustomerManager:
             CustomerManager.customers[cid] = customer
             print(f"Account created for {name} with ID {cid}")
         else:
-            print("Customer ID already exists!")
+            print("====!!! Customer ID already exists !!!====")
 
     @staticmethod
     def login():
@@ -38,12 +40,14 @@ class CustomerManager:
     def customerMenu(customer):
         flag = True
         while flag:
-            print(f"""\n==== Welcome {customer.name} ====
+            print(
+                f"""\n==== Welcome {customer.name} ====
     1. Check Balance
     2. Deposit Money
     3. Withdraw Money
     4. Change Pin
-    5. Exit""")
+    5. Exit"""
+            )
             choice = input("Choice: ")
             if choice == "1":
                 print(f"Balance: {customer.account.balance}")
@@ -71,38 +75,9 @@ class CustomerManager:
                 customer.pin = new_pin
                 print("PIN changed successfully!")
             else:
-                print("PINs do not match. Try again.")
+                print("====!!! PINs do not match. Try again !!!====")
         else:
-            print("Incorrect current PIN.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            print("====!!!Incorrect current PIN. !!!====")
 
 
 # from account import Account
@@ -128,7 +103,7 @@ class CustomerManager:
 #             balance=float(CustomerManager.customers[cstm_id].split(", ")[5].split(":")[1])
 #             string_list=CustomerManager.customers[cstm_id].split(", ")[6].split(":")[1]   #list
 #             transaction=string_list.strip("[]").split(", ")
-            
+
 #             print(pswd)
 #             if pin== pswd:
 #                 customer = CustomerManager.customers.get(cstm_id)
@@ -143,7 +118,7 @@ class CustomerManager:
 #         4. Transfer Money
 #         5. Change Pin
 #         6. Exit""")
-#                     choice = input("Choice : ") 
+#                     choice = input("Choice : ")
 #                     if choice == "1":
 #                         CustomerManager.checkBalance(cstm_id)
 #                     elif choice == "2":
@@ -164,7 +139,7 @@ class CustomerManager:
 #                             print("====!!! BACK TO LOGIN MENU !!!====")
 #                             flag=False
 #                         else:
-#                             print(f"!!! Attempt {attempt}, out of 3") 
+#                             print(f"!!! Attempt {attempt}, out of 3")
 #                             print("==== Invalid choice, try again ====")
 #             else:
 #                 print("==== Invalid User/Password Try again ====")
