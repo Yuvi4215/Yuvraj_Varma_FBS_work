@@ -2,6 +2,7 @@
 from dev import Dev
 from hr import HR
 from admin import Admin
+from prettytable import PrettyTable
 
 
 class EmployeeMethods:
@@ -158,12 +159,20 @@ class EmployeeMethods:
         if not EmployeeMethods.emp_details:
             print("There is no Employee Record Found !!!")
         else:
-            print("ID\tNAME\t Basic\t  Total\t\tDept")
+            table= PrettyTable(["ID", "NAME","BASIC","TOTAL","DEPT"])
             for val in EmployeeMethods.emp_details.values():
                 words = val.split(", ")
-                for ele in words:
-                    print(ele, end="    ")
-                print()
+                table.add_row(words)
+            print(table)    
+            # print("ID\tNAME\t Basic\t  Total\t\tDept")
+            # for val in EmployeeMethods.emp_details.values():
+                # print(val)
+                # table.add_row(val)
+                # words = val.split(", ")
+            #     for ele in words:
+            #         print(ele, end="    ")
+            #         print()
+            
 
     def searchEmp():
         id = input("Enter the Employee ID : ")
@@ -172,7 +181,11 @@ class EmployeeMethods:
             print(f"There is no employee with ID : {id}")
         else:
             print(f"Employee detailes-")
+            table= PrettyTable(["ID", "NAME","BASIC","TOTAL","DEPT"])
             words = value.split(", ")
-            for ele in words:
-                print(ele, end="   ")
-            print()
+            table.add_row(words)
+            print(table) 
+            # words = value.split(", ")
+            # for ele in words:
+            #     print(ele, end="   ")
+            # print()
