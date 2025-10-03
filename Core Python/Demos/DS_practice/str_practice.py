@@ -1,0 +1,22 @@
+### String practice
+
+word="This is sample string used."
+word.capitalize()
+word.count("i")
+word.find("i")
+word.index("i")
+word.isalnum()
+word.isdigit()
+word.isspace()
+word.isalpha()
+word.islower()
+word.isupper()
+word.startswith("it")
+word.endswith(".")
+word.title()
+word.swapcase()
+word.upper()
+word.lower()
+word.replace("fg","52")
+word.strip()
+print(",".join(word))

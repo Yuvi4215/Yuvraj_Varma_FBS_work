@@ -4,7 +4,7 @@ def pairSum(nums, target):
     seen = []
     pairs = []
     for num in nums:
-        print(num)
+        # print(num)
         diff = target - num
         if diff in seen:
             pair_val = (min(num, diff), max(num, diff))
