@@ -3,7 +3,7 @@
 
 
 class Vehical:
-    
+
     vehical_basic = {
         "2-Wheeler": 20,
         "3-Wheeler": 30,
@@ -19,7 +19,7 @@ class Vehical:
     }  # perperson
 
     def __init__(self, wheels, person):
-        print(wheels)
+        # print(wheels)
         if wheels in Vehical.vehical_basic:
             self.wheels = wheels
         else:
@@ -49,6 +49,16 @@ v3 = Vehical("4-Wheeler", 5)
 v4 = Vehical("5-Wheeler", 6)
 v5 = Vehical("6-Wheeler", 7)
 v6 = Vehical("7-Wheeler", 8)
+print(
+    "----------------------------------------------------------------------------------------------------------"
+)
+print(f"Vehicals and there basic charges : {v1.vehical_basic}")
+print(f"Vehicals and People allowed      : {v1.allowed}")
+print(f"Vehicals and extra charge/person : {v1.person_extra}")
+print(
+    "----------------------------------------------------------------------------------------------------------"
+)
+
 print(v1)
 print(v2)
 print(v3)
