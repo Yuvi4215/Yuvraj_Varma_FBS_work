@@ -3,6 +3,7 @@
 li = [10, 20, 30, 40, 50, 60]
 
 try:
+    # nu=1/0
     print(li)
     index = int(input("Enter the index to pop : "))
     li.pop(index)
@@ -10,14 +11,13 @@ try:
 
     val = int(input("Enter the value to get index : "))
     print(li.index(val))
-
-    # nu=1/0
+    raise ValueError
 except ValueError:
     print("ValueError occured :")
 except IndexError:
     print("IndexError occured :")
-except ZeroDivisionError:
-    print("ZeroDivisionError occured :")
+# except ZeroDivisionError as e:
+#     print("ZeroDivisionError occured :", e)
 
-except:
-    print("Genrealize error occured :")
+except Exception as e:
+    print("Genrealize error occured : ",e)
