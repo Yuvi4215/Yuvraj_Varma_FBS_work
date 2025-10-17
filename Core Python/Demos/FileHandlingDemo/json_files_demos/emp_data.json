@@ -1,0 +1,34 @@
+{
+    "101": {
+        "name": "EMP-101",
+        "age": 25,
+        "languages": [
+            "English",
+            "Spanish"
+        ]
+    },
+    "102": {
+        "name": "EMP-102",
+        "age": 28,
+        "languages": [
+            "English",
+            "Spanish"
+        ]
+    },
+    "103": {
+        "name": "EMP-103",
+        "age": 27,
+        "languages": [
+            "English",
+            "Spanish"
+        ]
+    },
+    "104": {
+        "name": "EMP-104",
+        "age": 32,
+        "languages": [
+            "English",
+            "Spanish"
+        ]
+    }
+}
