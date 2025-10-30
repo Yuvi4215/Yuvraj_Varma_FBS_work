@@ -1,4 +1,5 @@
 from tkinter import *
+
 def add():
     print("in add fuction")
     n1=text1.get()
@@ -28,7 +29,7 @@ if __name__=="__main__":
     
     btn=Button(window, text="Addition", command=add)
     
-    result_label = Label(window, text="Result: ")
+    result_label = Label(window, text=" ")
     
 
     label1.grid(row=1, column=1)
