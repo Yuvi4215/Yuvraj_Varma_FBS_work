@@ -28,7 +28,7 @@ result= re.findall(r"\w{3}",string)
 #+ - 1 or more occurances
 result= re.findall(r"\w+",string)
 
-#\* - 0 or more occurances
+#* - 0 or more occurances
 result= re.findall(r"\w*",string)
 
 #? - 0 or 1
