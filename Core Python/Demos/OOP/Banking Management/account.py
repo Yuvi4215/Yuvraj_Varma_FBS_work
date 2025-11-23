@@ -33,6 +33,6 @@ class Account:
         )
  
     
-a1=Account(acc_no="12147", customer_id="101", balance=0, transactions=None)
-print(a1)
-print(a1.customer_id)
+# a1=Account(acc_no="12147", customer_id="101", balance=0, transactions=None)
+# print(a1)
+# print(a1.customer_id)
