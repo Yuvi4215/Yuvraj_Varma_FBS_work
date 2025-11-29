@@ -10,7 +10,7 @@ def isPrime(num):
     else:
         return True
 
-number = 97
+number = 1
 if isPrime(number):
     print(f"{number} is- Prime Number.")
 else:
